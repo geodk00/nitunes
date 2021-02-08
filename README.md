@@ -6,7 +6,7 @@ The requirements were:
  - A number of API endpoints
 
 ## Deployment
-This project as been deployed as a docker container to Heroku available at <https://nitunes.herokuapp.com/>
+This project as been deployed as a docker container to Heroku and is available at <https://nitunes.herokuapp.com/>
 
 Commands used to deploy:
 
