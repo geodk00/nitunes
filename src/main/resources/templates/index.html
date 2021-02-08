@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Nitunes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1>Random Artists:</h1>
+<ul>
+    <li th:each="artist: ${artists}" th:text="${artist.getName()}" ></li>
+</ul>
+
+<h1>Random Genres:</h1>
+<ul>
+    <li th:each="genre: ${genres}" th:text="${genre.getName()}" ></li>
+</ul>
+
+<h1>Random Tracks:</h1>
+<ul>
+    <li th:each="track: ${tracks}" th:text="${track.getAlbumName()} + ' - ' + ${track.getArtistName()} + ' - ' + ${track.getName()}" ></li>
+</ul>
+
+<form action="/search" method="GET">
+    <div>
+        <label for="term">Search term: </label>
+        <input name="term" id="term" value="">
+    </div>
+    <div>
+        <button>Search</button>
+    </div>
+</form>
+</body>
+
+</html>

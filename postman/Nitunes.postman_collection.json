@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "00373b54-4bfd-494a-81d0-faf8635c2746",
+		"name": "Nitunes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get Customers",
+					"protocolProfileBehavior": {
+						"strictSSL": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						},
+						"description": "Get all Customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/1",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Invalid Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/9999",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"McTest\",\r\n    \"country\": \"Testistan\",\r\n    \"postalCode\": \"TS 555\",\r\n    \"phone\": \"555 555 555\",\r\n    \"email\": \"test@test.tn\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Luís_UPDATE\",\r\n    \"lastName\": \"Gonçalves_UPDATE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/1",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Luís_UPDATE\",\r\n    \"lastName\": \"Gonçalves_UPDATE\",\r\n    \"email\": \"luisg@embraer.com.br_UPDATE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/1",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/countries",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Spenders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/spenders",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"spenders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Genre (Two genres)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/12/genre",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"12",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Genre (One genre)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/12/genre",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"12",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Genre (Invalid Customer)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ADDRESS}}:{{PORT}}/api/v1/customers/9999/genre",
+							"host": [
+								"{{ADDRESS}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"9999",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ADDRESS",
+			"value": "https://nitunes.herokuapp.com"
+		},
+		{
+			"key": "PORT",
+			"value": "443"
+		}
+	]
+}

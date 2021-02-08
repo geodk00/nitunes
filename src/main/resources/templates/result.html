@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Nitunes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div th:if="${results.empty}">Empty Search Term or no results found</div>
+<div th:if="${!results.empty}">
+<h1>Results for "<span th:text="${term}"></span>":</h1>
+
+<table>
+    <tr>
+        <th>Track Name</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Genre</th>
+    </tr>
+    <tr th:each="result : ${results}">
+        <td th:text="${result.getName()}"></td>
+        <td th:text="${result.getArtistName()}"></td>
+        <td th:text="${result.getAlbumName()}"></td>
+        <td th:text="${result.getGenre()}"></td>
+    </tr>
+</table>
+</div>
+</body>
+
+</html>
