@@ -6,7 +6,7 @@ The requirements were:
  - A number of API endpoints
 
 ## Deployment
-This project as been deployed as a docker container to Heroku.
+This project as been deployed as a docker container to Heroku available at <https://nitunes.herokuapp.com/>
 
 Commands used to deploy:
 
@@ -23,7 +23,7 @@ Get all customers: `GET /api/v1/customers`
 
 Get customer: `GET /api/v1/customers/{id}`
 
-Create customer: `POST /api/v1/customers`
+Create a customer: `POST /api/v1/customers`
 
 Update customer: `PUT|PATCH /api/v1/customers/{id}`
 
@@ -32,6 +32,10 @@ Get Customers in countries: `GET /api/v1/customers/countries`
 Get top 50 spenders: `GET /api/v1/customers/spenders`
 
 Get customer's favorite genre: `GET /api/v1/customers/{id}/genre`
+
+## Postman
+The postman directory contains a collection of postman requests to test the API.
+The requests point to the heroku instance by default.
 
 ## Project Structure
 The project is split into three sub packages:
@@ -46,6 +50,3 @@ This packages contains the repositories for the db types.
 
 ### `org.c0g.nitunes.model`
 This pacakges contains the data model used from the db.
-
-## Postman
-The postman directory contains a collection of postman requests to test the API
